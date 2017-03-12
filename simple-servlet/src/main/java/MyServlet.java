@@ -12,12 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 public class MyServlet extends HttpServlet{
 
 
-    public void doGe(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException{
         PrintWriter out = response.getWriter();
         out.println("<html>");
         out.println("<body>");
         out.println("<h1>Hello Servlet Get</h1>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException{
+        PrintWriter out = response.getWriter();
+        out.println("<html>");
+        out.println("<body>");
+        out.println("<h1>Hello Servlet Post</h1>");
         out.println("</body>");
         out.println("</html>");
     }
